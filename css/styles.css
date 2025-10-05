@@ -1,0 +1,92 @@
+/* styles.css - theme: green (#1e9b53), black, white, grey */
+:root{
+  --green:#1e9b53;
+  --black:#0b0b0b;
+  --white:#ffffff;
+  --muted:#6b6b6b;
+  --glass: rgba(255,255,255,0.08);
+  --container:1200px;
+  --radius:12px;
+  font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;color:var(--black);background:linear-gradient(180deg,#fff,#f7f7f7);font-size:16px;line-height:1.5}
+.container{max-width:var(--container);margin:0 auto;padding:1.5rem}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:1rem 0}
+.brand{font-weight:700;color:var(--black);text-decoration:none;font-size:1.125rem}
+.nav{display:flex;gap:1rem;align-items:center}
+.nav a{color:var(--muted);text-decoration:none;padding:.4rem .65rem;border-radius:8px}
+.nav a.cta{background:var(--green);color:var(--white)}
+.nav-toggle{display:none;background:none;border:0;font-size:1.5rem}
+
+/* Hero */
+.hero{padding:3rem 0}
+.hero-grid{display:grid;grid-template-columns:1fr 480px;gap:2rem;align-items:center}
+.hero-copy h1{font-size:2.25rem;margin:0 0 .6rem}
+.lead{color:var(--muted);margin-bottom:1rem}
+.btn{display:inline-block;padding:.7rem 1rem;border-radius:10px;border:1px solid transparent;text-decoration:none;font-weight:600}
+.btn-primary{background:var(--green);color:var(--white)}
+.btn-outline{background:transparent;border:1px solid #e3e3e3}
+.hero-media img{width:100%;border-radius:12px;box-shadow:0 6px 22px rgba(16,16,16,0.12)}
+.hero-badges{list-style:none;padding:0;margin:1rem 0 0;display:flex;gap:.5rem}
+.hero-badges li{background:#f2fff6;border-radius:999px;padding:.35rem .6rem;font-weight:600;color:var(--green)}
+
+/* Sections */
+.section{padding:3rem 0}
+.section.alt{background:#fff}
+.section-title{font-size:1.5rem;margin-bottom:.25rem}
+.section-sub{color:var(--muted);margin-bottom:1.25rem}
+
+.features-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.feature{background:var(--white);border-radius:12px;padding:1rem;box-shadow:0 4px 14px rgba(12,12,12,0.05)}
+.feature img{width:100%;height:140px;object-fit:cover;border-radius:8px;margin-bottom:.6rem}
+
+.projects-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.project-card{background:var(--white);border-radius:12px;overflow:hidden;box-shadow:0 8px 30px rgba(12,12,12,0.06)}
+.project-card img{width:100%;height:160px;object-fit:cover}
+.project-body{padding:1rem}
+.project-meta{font-size:.85rem;color:var(--muted)}
+
+.testimonials{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.testimonial{background:linear-gradient(180deg,#fff,#fcfffd);padding:1rem;border-radius:12px;border-left:4px solid var(--green)}
+.testimonial footer{margin-top:.6rem;font-weight:600;color:var(--muted);font-size:.95rem}
+
+.contact-grid{display:grid;grid-template-columns:1fr 420px;gap:2rem;align-items:start}
+.contact-copy{padding:1rem 0}
+.contact-form{background:var(--white);padding:1rem;border-radius:12px;box-shadow:0 8px 30px rgba(12,12,12,0.06)}
+.contact-form label{display:block;margin-top:.6rem;font-weight:600}
+.contact-form input,.contact-form textarea{width:100%;padding:.6rem;border-radius:8px;border:1px solid #e6e6e6;margin-top:.4rem}
+.form-actions{display:flex;gap:.6rem;margin-top:1rem}
+.form-status{margin-top:.6rem;color:var(--muted)}
+
+.site-footer{padding:1rem 0;background:#0b0b0b;color:#fff;margin-top:2rem}
+.footer-inner{display:flex;justify-content:space-between;align-items:center}
+.footer-nav a{color:#dcdcdc;text-decoration:none;margin-left:1rem}
+
+/* Responsive */
+@media (max-width:1024px){
+  .hero-grid{grid-template-columns:1fr 360px}
+  .features-grid{grid-template-columns:repeat(2,1fr)}
+  .projects-grid{grid-template-columns:repeat(2,1fr)}
+  .testimonials{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:720px){
+  .nav{display:none}
+  .nav-toggle{display:block}
+  .hero-grid{grid-template-columns:1fr;gap:1rem}
+  .contact-grid{grid-template-columns:1fr}
+  .features-grid,.projects-grid,.testimonials{grid-template-columns:1fr}
+  .header-inner{gap:.5rem}
+}
+
+/* utility */
+.text-center{text-align:center}
+.small{font-size:.9rem;color:var(--muted)}
+
+
+/* Accessibility focus states */
+a:focus{outline:3px solid rgba(30,155,83,0.18);outline-offset:3px}
+
+
+/* end */
